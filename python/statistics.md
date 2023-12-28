@@ -62,7 +62,11 @@ if isgenerator(data):       # 最完整的判断方法，具体判断方法可�
 
 # or not
 from typing import Iterable
-if isinstance(data, Iterable):  # 是要是可迭代（list、set...）的都是True
+if isinstance(data, Iterable):  # 只要是可迭代（list、set...）的都是True
     ...
 ```
 
+> 简单线性回归 `linear_regression` 函数使用 **最小二乘法** 进行计算，返回预定义的具名元组 `LinearRegression`
+```python
+LinearRegression = namedtuple('LinearRegression', ('slope', 'intercept')
+```
