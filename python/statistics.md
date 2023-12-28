@@ -70,3 +70,12 @@ if isinstance(data, Iterable):  # 只要是可迭代（list、set...）的都是
 ```python
 LinearRegression = namedtuple('LinearRegression', ('slope', 'intercept')
 ```
+
+> 可以使用 `__slots__` 限制类可以被绑定的属性和方法
+```python
+class NormalDist:
+    __slots__ = {
+        '_mu': 'Arithmetic mean of a normal distribution',
+        '_sigma': 'Standard deviation of a normal distribution',
+    }
+```
