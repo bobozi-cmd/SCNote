@@ -1,7 +1,7 @@
 # statistics
 > Note: 本文涉及的python源码的版本为 python 3.10.12
 
-`statistics.py` 是Python的一个标准库，主要提供了用于**常见数据处理**的函数。
+`statistics.py` 是Python的一个标准库，主要提供了用于**常见统计类数据处理**的函数。详见[PEP450](https://peps.python.org/pep-0450/)以及[statistics](https://docs.python.org/zh-cn/3/library/statistics.html)。
 
 ### <span style="border-bottom:2px dashed yellow;">The First Glance</span>
 
@@ -41,7 +41,7 @@ __all__ = [
 
 ### <span style="border-bottom:2px dashed yellow;">Take Away</span>
 
-> 1.Python的`doctest`可以通过增加`#doctest: +ELLIPSIS`的注释来规避某些随机情况和复杂输出
+> 1.Python的 `doctest` 可以通过增加 `#doctest: +ELLIPSIS` 的注释来规避某些随机情况和复杂输出
 ```python
 """
 >>> stdev([2.5, 3.25, 5.5, 11.25, 11.75])  #doctest: +ELLIPSIS
@@ -66,12 +66,12 @@ if isinstance(data, Iterable):  # 只要是可迭代（list、set...）的都是
     ...
 ```
 
-> 简单线性回归 `linear_regression` 函数使用 **最小二乘法** 进行计算，返回预定义的具名元组 `LinearRegression`
+> 3.简单线性回归 `linear_regression` 函数使用 **最小二乘法** 进行计算，返回预定义的具名元组 `LinearRegression`
 ```python
 LinearRegression = namedtuple('LinearRegression', ('slope', 'intercept')
 ```
 
-> 可以使用 `__slots__` 限制类可以被绑定的属性和方法
+> 4.可以使用 `__slots__` 限制类可以被绑定的属性和方法
 ```python
 class NormalDist:
     __slots__ = {
